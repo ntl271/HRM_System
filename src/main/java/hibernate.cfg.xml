@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+	<!-- JDBC connection settings -->
+	<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+	<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/winterhold_hrm</property>
+	<property name="hibernate.connection.username">root</property>
+	<property name="hibernate.connection.password">123456a@</property>
+
+	<!-- Database dialect -->
+	<property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+	<property name="hibernate.show_sql">true</property>
+	<property name="hibernate.format_sql">true</property>
+	<property name="hibernate.use_sql_comments">true</property>
+	<!-- Auto create/update schema -->
+	<property name="hibernate.hbm2ddl.auto">update</property>
+
+	<!-- Show SQL statements -->
+	<property name="show_sql">true</property>
+
+	<!-- Entity mappings -->
+	<mapping class="com.winterhold.Model.Staff" />
+	<mapping class="com.winterhold.Model.Account" />
+	<mapping class="com.winterhold.Model.Department" />
+	<mapping class="com.winterhold.Model.Leave" />
+	<mapping class="com.winterhold.Model.Notification" />
+	<mapping class="com.winterhold.Model.Office" />
+	<mapping class="com.winterhold.Model.OTBonus" />
+	<mapping class="com.winterhold.Model.Salary" />
+	<mapping class="com.winterhold.Model.TicketAndThumup" />
+	<mapping class="com.winterhold.Model.Timekeeping" />
+
+
+	</session-factory>
+</hibernate-configuration>
